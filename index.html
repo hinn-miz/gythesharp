@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>더샵 광양레이크센텀</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2404@1.0/Yangjin.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+  <header class="hero">
+    <div class="top-bar">
+      <div class="top-left">
+<a href="#top" class="logo-link">
+  <img src="images/logo.png" alt="로고" class="logo" />
+</a>
+
+      </div>
+      <div class="top-center menu">
+        <a href="#business">사업안내</a>
+        <a href="#complex">단지안내</a>
+        <a href="#units">평형정보</a>
+        <a href="#location">오시는길</a>
+      </div>
+      <div class="top-right contact-number">
+        <a href="tel:01049049612">문의 010-4904-9612</a>
+      </div>
+    </div>
+    <div class="overlay">
+      <h1 class="hero-headline">광양의 중심을 눈앞에 <br>프리미엄을 누리다</h1>
+      <p class="hero-subtext">더샵 광양레이크센텀</p>
+    </div>
+  </header>
+
+  <section id="business" class="image-section business-section">
+    <h2 class="section-title">사업안내</h2>
+    <div class="image-container">
+      <img src="images/business.jpg"class="scroll-fade" alt="사업안내 이미지">
+    </div>
+    <div class="business-info">
+      <div class="info-column">
+        <div class="info-item">
+          <h3>대지위치</h3><p>전라남도 광양시 마동 348-4번지 일원</p>
+        </div>
+        <div class="info-item">
+          <h3>대지면적</h3><p>45,203.50m²</p>
+        </div>
+        <div class="info-item">
+          <h3>용적률 / 건폐율</h3><p>247.62% / 14.71%</p>
+        </div>
+      </div>
+      <div class="info-column">
+        <div class="info-item">
+          <h3>규모</h3><p>지하 3층 ~ 지상 29층 / 9개동</p>
+        </div>
+        <div class="info-item">
+          <h3>세대수</h3><p>925세대</p>
+        </div>
+        <div class="info-item">
+          <h3>주차대수</h3><p>총 1,395대 (세대당 1.5대)</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-container wide business2">
+      <img id="business2-image" src="images/business2.jpg"class="scroll-fade" alt="사업안내 추가 이미지">
+      <button class="zoom-button" onclick="openZoom('images/business2.jpg')">🔍 확대보기</button>
+    </div>
+  </section>
+
+  <section id="complex" class="image-section complex-section">
+    <h2 class="section-title">단지안내</h2>
+    <div class="image-container">
+      <img src="images/complex.jpg"class="scroll-fade" alt="단지안내 이미지">
+            <p class="image-subtitle">동·호배치도</p>
+      <img src="images/complex2.jpg"class="scroll-fade" alt="동호 배치도 이미지">
+      <p class="image-subtitle">커뮤니티</p>
+      <img src="images/complex3.jpg" class="scroll-fade" alt="커뮤니티 이미지">
+    </div>
+  </section>
+
+  <section id="units"class="scroll-fade" class="image-section units-section">
+    <h2 class="section-title">평형안내</h2>
+    <div class="unit-tabs">
+      <button onclick="selectFloor('84')">84㎡</button>
+      <button onclick="selectFloor('115')">115㎡</button>
+      <button onclick="selectFloor('PH')">PH</button>
+    </div>
+    <div id="unit-subtabs" class="unit-subtabs"></div>
+    <div class="unit-slides">
+      <img id="unit-image" src="" alt="도면 이미지" style="display: none;">
+    </div>
+  </section>
+
+  <section id="location" class="image-section location-section">
+    <h2 class="section-title">오시는길</h2>
+    <div class="image-container">
+      <img src="images/location.jpg" class="scroll-fade" alt="오시는길 이미지">
+    </div>
+
+    <div class="notice-box">
+      <h3 class="notice-title">⚠ 주의사항</h3>
+      <p class="notice-text">
+        더샵 광양레이크센텀의 견본주택은 <strong class="highlight">100% 예약담당제로</strong> 운영되고 있으며,<br>
+        <span class="pc-only"><br></span>
+        예약 없이 관람은 가능하나 <strong class="highlight">모든 행사와 혜택 대상에서 제외</strong><br class="mobile-only">될 수 있음을 안내드립니다.
+      </p>
+    </div>
+
+    <div class="form-section">
+      <h2>예약/문의</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input type="text" name="name" placeholder="이름" required style="flex: 1; min-width: 200px;" />
+          <input type="tel" name="phone" placeholder="연락처" required style="flex: 1; min-width: 200px;" />
+        </div>
+        <select name="type">
+          <option value="">관심 평형</option>
+          <option value="84">84㎡</option>
+          <option value="115">115㎡</option>
+          <option value="PH">PH㎡</option>
+        </select>
+        <label style="display: block; margin: 10px 0;">
+          <input type="checkbox" required style="margin-right: 6px;" /> 개인정보 수집 동의
+        </label>
+        <button type="submit">문의하기</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="zoom-modal" class="zoom-modal" onclick="closeZoom()">
+    <img id="zoomed-image" src="" alt="확대 이미지">
+  </div>
+
+  <script>
+    const unitTypes = {
+      '84': ['A', 'B', 'C', 'D'],
+      '115': ['A', 'B'],
+      'PH': ['134', '137', '157', '159']
+    };
+
+    function selectFloor(size) {
+      const subtabs = document.getElementById('unit-subtabs');
+      subtabs.innerHTML = '';
+      unitTypes[size].forEach(type => {
+        const btn = document.createElement('button');
+        btn.innerText = `${size}${type}`;
+        btn.onclick = () => showUnitImage(`${size}${type}`);
+        subtabs.appendChild(btn);
+      });
+      const firstType = unitTypes[size][0];
+      showUnitImage(`${size}${firstType}`);
+    }
+
+    function showUnitImage(id) {
+      const img = document.getElementById('unit-image');
+      img.src = `images/unit_${id}.png`;
+      img.alt = `${id} 도면`;
+      img.style.display = 'block';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      selectFloor('84');
+    });
+  </script>
+
+  <script>
+    const hero = document.querySelector('.hero');
+    const images = [
+      'images/hero1.jpg',
+      'images/hero2.jpg',
+      'images/hero3.jpg'
+    ];
+    let index = 0;
+    function rotateHeroBackground() {
+      hero.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+    if (window.innerWidth >= 1024) {
+      rotateHeroBackground();
+      setInterval(rotateHeroBackground, 5000);
+    }
+  </script>
+
+  <script>
+    function openZoom(imageSrc) {
+      const modal = document.getElementById('zoom-modal');
+      const zoomedImage = document.getElementById('zoomed-image');
+      zoomedImage.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+
+    function closeZoom() {
+      document.getElementById('zoom-modal').style.display = 'none';
+    }
+  </script>
+  <script>
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.scroll-fade').forEach(el => scrollObserver.observe(el));
+</script>
+<footer class="site-footer">
+  <div class="footer-left">
+    <strong>POSCO<br>포스코이앤씨</strong><br>
+    시행 수탁사:교보자산신탁㈜ㅣ시행 위탁사:㈜한국자산개발ㅣ<br>시공사:㈜포스코이앤씨<br>
+    온라인 마케팅 대행 : 미쯔씨앤에이 <br>
+    <p class="footer-note">※ 본 홈페이지의 CG, 이미지컷은 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다소 차이가 있을 수 있습니다.<br>
+    ※ 본 홈페이지의 명시된 개발계획은 관계기관 혹은 지자체의 사정에 의해 변경 또는 취소될 수 있습니다.</p>
+      <p class=\"copyright\">© 본페이지 콘텐츠의 무단 복제 및 재배포를 금지합니다.
+</p>
+  </div>
+
+  <div class="footer-right">
+    <button class="top-button" onclick="scrollToTop()">↑<br><span>TOP</span></button>
+
+
+  </div>
+</footer>
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+
+
+</html>
