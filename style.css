@@ -315,6 +315,18 @@ form button {
 }
 /* 반응형 대응 */
 @media screen and (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;          /* 이미 있을 가능성 있음 */
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .menu a {
+    padding: 6px 10px;
+    white-space: nowrap;      /* ✅ 한 줄로 고정 */
+    font-size: 0.95rem;       /* ✅ 글씨 크기 약간 줄이기 */
+  }
+
    .top-button {
     position: fixed;
     bottom: 20px;
