@@ -406,6 +406,9 @@ form button {
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   border-radius: 8px;
 }
+section {
+  scroll-margin-top: 140px; /* 상단 고정바 높이만큼 보정 */
+}
 
 @media screen and (min-width: 1024px) {
   .image-container img {
@@ -561,6 +564,4 @@ form button {
   font-size: 1rem;
   cursor: pointer;
 }
-section {
-  scroll-margin-top: 140px; /* 상단 고정바 높이만큼 보정 */
-}
+
