@@ -316,9 +316,21 @@ form button {
 /* 반응형 대응 */
 @media screen and (max-width: 768px) {
   .menu {
-    flex-wrap: wrap;          /* 이미 있을 가능성 있음 */
-    justify-content: center;
-    gap: 6px;
+    display: flex;
+    justify-content: space-between;  /* 네 개 딱 맞게 배치 */
+    flex-wrap: nowrap;               /* ✅ 줄바꿈 금지 */
+    gap: 0;
+    padding: 0 10px;
+  }
+
+  .menu a {
+    flex: 1;                         /* ✅ 네 개가 균등 너비 차지 */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    white-space: nowrap;             /* ✅ 한 줄 유지 */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .menu a {
