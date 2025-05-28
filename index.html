@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+  
   <title>더샵 광양레이크센텀</title>
 <meta name="description" content="광양 최고의 프리미엄 주거 공간, 더샵 광양레이크센텀. 단지 안내, 평면도, 위치 정보까지 모두 확인해보세요.">
 
@@ -126,26 +127,32 @@
       </p>
     </div>
 
-    <div class="form-section">
-      <h2>예약/문의</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <input type="text" name="name" placeholder="이름" required style="flex: 1; min-width: 200px;" />
-          <input type="tel" name="phone" placeholder="연락처" required style="flex: 1; min-width: 200px;" />
-        </div>
-        <select name="type">
-          <option value="">관심 평형</option>
-          <option value="84">84㎡</option>
-          <option value="115">115㎡</option>
-          <option value="PH">PH㎡</option>
-        </select>
-        <label style="display: block; margin: 10px 0;">
-          <input type="checkbox" required style="margin-right: 6px;" /> 개인정보 수집 동의
-        </label>
-        <button type="submit">문의하기</button>
-      </form>
+<div class="form-section">
+  <h2>예약/문의</h2>
+  <form name="contact" method="POST" data-netlify="true">
+    <!-- ✅ Netlify가 폼을 인식할 수 있도록 hidden input 추가 -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <input type="text" name="name" placeholder="이름" required style="flex: 1; min-width: 200px;" />
+      <input type="tel" name="phone" placeholder="연락처" required style="flex: 1; min-width: 200px;" />
     </div>
-  </section>
+
+    <select name="type">
+      <option value="">관심 평형</option>
+      <option value="84">84㎡</option>
+      <option value="115">115㎡</option>
+      <option value="PH">PH㎡</option>
+    </select>
+
+    <label style="display: block; margin: 10px 0;">
+      <input type="checkbox" required style="margin-right: 6px;" /> 개인정보 수집 동의
+    </label>
+
+    <button type="submit">문의하기</button>
+  </form>
+</div>
+
 
   <div id="zoom-modal" class="zoom-modal" onclick="closeZoom()">
     <img id="zoomed-image" src="" alt="확대 이미지">
