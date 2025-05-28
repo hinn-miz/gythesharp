@@ -484,6 +484,20 @@ form button {
   text-decoration: underline;
 }
 
+/* PC 기준 명확히 좌우 정렬 유지 */
+@media screen and (min-width: 1024px) {
+  .footer-left {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    text-align: right;
+    align-items: flex-end;
+  }
+}
+
+
 .copyright {
   font-size: 0.75rem;
   color: #aaa;
